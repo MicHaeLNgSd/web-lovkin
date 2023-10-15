@@ -1,0 +1,138 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+
+    background-color: gray;
+    color: #fff;
+    padding: 5px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+nav ul li.active a{
+  background-color: #5052C7;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+
+  background-color:dimgray;
+  padding: 10px;
+  border: 3px #333 solid;
+  border-radius: 20px;
+}
+nav ul a:hover {
+  color: #FCCA46;
+}
+
+main {
+    width:80%;
+    min-height: 100vh;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+aside {
+  width: 40%;
+  max-width: 300px;
+
+  padding: 5px;
+  margin: 30px 0 15px 10px;
+
+  float: right;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+aside h3{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Стилі для футера */
+p{
+  text-indent: 30px;
+  margin: 20px 0;
+}
+
+section{
+  margin: 20px 0;
+}
+
+#asidePhoto{
+  scale: initial;
+  /* margin: 0 auto; */
+}
+
+#asideInfo {
+  width: 100%;
+}
+#asideInfo tr{
+  margin: 10px 0;
+}
+#asideInfo th {
+  background-color: #e5e5e5;
+  padding: 4px 4px;
+  text-align: left;
+}
+#asideInfo td {
+  padding: 4px 4px; 
+}
+
+#themesOfPage h4{
+width: max-content;
+margin: 0 auto;
+}
+#themesOfPage ol{
+padding-inline-start: 20px;
+}
+
+#themesOfPage{
+width: max-content;
+
+background-color: #f4f4f4;
+padding: 10px;
+border: 1px solid #ccc;
+}
+
+/* Стилі для футера */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color:#fff;
+
+  float: bottom;
+}
+footer a{
+  color:#fff;
+  text-decoration: none;
+}
