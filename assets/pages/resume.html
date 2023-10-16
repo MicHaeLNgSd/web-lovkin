@@ -86,60 +86,66 @@
         <h2><u>Контактна інформація:</u></h2>
         <ol>
           <li>
-            <b>Email: </b
-            ><a href="mailto:misha.grigorov2020@gmail"
-              >misha.grigorov2020@gmail</a
-            >
+            <b>Email: </b>
+            <a href="mailto:misha.grigorov2020@gmail">
+              misha.grigorov2020@gmail
+            </a>
           </li>
           <li>
             <b>Номер телефона: </b><a href="tel:380509611945">+380509611945</a>
           </li>
-          <a href="https://t.me/KarMiGor"
-            ><img
+        </ol>
+        <div class="no-decor">
+          <a href="https://t.me/KarMiGor">
+            <img
               width="48"
               height="48"
               src="https://img.icons8.com/color/100/telegram-app--v1.png"
               alt="telegram-app--v1"
-          /></a>
-          <a href="https://www.linkedin.com/in/mykhailo-hryhorov-230143273/"
-            ><img
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/mykhailo-hryhorov-230143273/">
+            <img
               width="48"
               height="48"
               src="https://img.icons8.com/fluency/48/linkedin.png"
               alt="linkedin"
-          /></a>
-          <a href="https://github.com/MicHaeLNgSd"
-            ><img
+            />
+          </a>
+          <a href="https://github.com/MicHaeLNgSd">
+            <img
               width="48"
               height="48"
               src="https://img.icons8.com/ios-glyphs/30/github.png"
               alt="github"
-          /></a>
-        </ol>
+            />
+          </a>
+        </div>
       </main>
 
       <footer>
-        <form action="" style="width: 50%">
+        <form action="" style="width: 50%" id="form">
           <fieldset>
             <legend><h3>Форма зворотнього зв'язку</h3></legend>
             <label for="name"><b>Ім'я</b></label>
-            <input type="text" name="name" />
+            <input type="text" name="name" id="formName" required/>
             <br />
             <label for="email"><b>Електрона пошта:</b></label>
-            <input type="email" name="email" />
+            <input type="email" name="email" id="formEmail" required/>
             <br />
             <label for="phone"><b>Телефон:</b></label>
-            <input type="number" name="phone" />
+            <input type="tel" name="phone" id="formPhone" required/>
             <br />
             <label for="message"><b>Текст повідомлення</b></label>
-            <textarea name="message" cols="30" rows="5"></textarea>
-            <button type="button"><b>Send</b></button>
+            <textarea name="message" maxlength="500" cols="30" rows="5" id="formText" required></textarea>
+            <div id="messageLength" style="text-align: left; margin-left: 20px;"></div>
+            <button type="submit" id="formBtnSend"><b>Send</b></button>
           </fieldset>
         </form>
         <h2>
-          <a href="table.html" style="color: blue"
-            ><u>Я вмію створюти таблиці!</u></a
-          >
+          <a href="table.html" style="color: blue">
+            <u>Я вмію створюти таблиці!</u>
+          </a>
         </h2>
       </footer>
       <div class="footerImage">
@@ -147,4 +153,43 @@
       </div>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("form");
+      const formName = document.getElementById("formName");
+      const formEmail = document.getElementById("formEmail");
+      const formPhone = document.getElementById("formPhone");
+      const formText = document.getElementById("formText");
+      const formBtnSend = document.getElementById("formBtnSend");
+      const messageLengthElement = document.getElementById("messageLength");
+
+      const namePattern = /^((?![ЫыЪъЭэ])[A-Za-zА-яІіЇїЄє])+$/
+      const emailPattern = /^.+@.+\..+$/;
+      const phonePattern = /^(?![\s()-])[0-9()+-\s]+$/;
+      // const phonePattern = /^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$/
+
+      messageLengthElement.textContent = "0/500"
+      formText.addEventListener('input', (e)=>{
+        messageLengthElement.textContent = formText.value.length + "/500"
+      });
+
+      form.addEventListener('submit', (e)=>{
+        let messages = []
+        if(!namePattern.test(formName.value)){
+          messages.push('Name must use only english and ukrainian letters')
+        }
+        if(!emailPattern.test(formEmail.value)){
+          messages.push('Email must be like symbols@symbols.symbols')
+        }
+        if(!phonePattern.test(formPhone.value)){
+          messages.push('Phone must use only numbers, "(", ")", "+", "-"')
+        }
+        
+        if(messages.length > 0){
+          e.preventDefault()
+          alert(messages.join('\n'))
+        } 
+      });
+    });
+  </script>
 </html>

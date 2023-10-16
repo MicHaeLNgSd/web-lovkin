@@ -6,15 +6,22 @@
     <title>Марк Цукерберґ - KarMiGoria</title>
     <link rel="icon" href="./assets/img/K.png" />
     <link rel="stylesheet" href="assets/css/wiki.css" />
+    <script src="https://kit.fontawesome.com/fdf26cd1b2.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/burger.js"></script>
+    <script defer src="./assets/js/quotes.js"></script>
   </head>
   <body>
     <header>Марк Цукерберґ</header>
     <nav>
-      <ul>
+      <div id="burgerBtn">
+        <i onclick="burger()" id="burgerBtnOpen" class="fa-solid fa-bars"></i>
+        <i onclick="burger()" id="burgerBtnClose" class="fa-solid fa-xmark invisible"></i>
+      </div>
+      <ul id="burgerMenu" class="invisible">
         <li class="active"><a href="index.html">Головна</a></li>
-        <li><a href="sec1.html">Марк Цукерберґ</a></li>
-        <li><a href="sec2.html">Життєпис</a></li>
-        <li><a href="sec3.html">Розвиток мережі Facebook</a></li>
+        <li><a href="./assets/pages/sec1.html">Марк Цукерберґ</a></li>
+        <li><a href="./assets/pages/sec2.html">Життєпис</a></li>
+        <li><a href="./assets/pages/sec3.html">Розвиток мережі Facebook</a></li>
       </ul>
     </nav>
     <main>
@@ -184,6 +191,7 @@
         <a href="https://t.me/KarMiGor">© KarMiGoria</a> -
         <a href="assets/pages/resume.html">Григоров</a>
       </p>
+      <p id="quotes"></p>
     </footer>
   </body>
 </html>
