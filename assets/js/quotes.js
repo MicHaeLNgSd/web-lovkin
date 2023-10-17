@@ -11,10 +11,4 @@ const quotes = [
   "80% успіху — це з’явитися в потрібному місці в потрібний час. – Вуді Аллен."
 ]
 
-// const line = document.getElementById("quotes");
-// line.innerHTML = quoteOfTheDay();
-document.getElementById("quotes").innerText = quoteOfTheDay();
-
-function quoteOfTheDay(){
-  return quotes[Math.floor(Math.random() * quotes.length)];
-}
+document.getElementById("quotes").innerText = quotes[Math.floor(Math.random() * quotes.length)];
