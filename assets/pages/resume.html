@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Моє резюме</title>
     <link rel="stylesheet" href="../css/resume.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -128,17 +129,27 @@
           <fieldset>
             <legend><h3>Форма зворотнього зв'язку</h3></legend>
             <label for="name"><b>Ім'я</b></label>
-            <input type="text" name="name" id="formName" required/>
+            <input type="text" name="name" id="formName" required />
             <br />
             <label for="email"><b>Електрона пошта:</b></label>
-            <input type="email" name="email" id="formEmail" required/>
+            <input type="email" name="email" id="formEmail" required />
             <br />
             <label for="phone"><b>Телефон:</b></label>
-            <input type="tel" name="phone" id="formPhone" required/>
+            <input type="tel" name="phone" id="formPhone" required />
             <br />
             <label for="message"><b>Текст повідомлення</b></label>
-            <textarea name="message" maxlength="500" cols="30" rows="5" id="formText" required></textarea>
-            <div id="messageLength" style="text-align: left; margin-left: 20px;"></div>
+            <textarea
+              name="message"
+              maxlength="500"
+              cols="30"
+              rows="5"
+              id="formText"
+              required
+            ></textarea>
+            <div
+              id="messageLength"
+              style="text-align: left; margin-left: 20px"
+            ></div>
             <button type="submit" id="formBtnSend"><b>Send</b></button>
           </fieldset>
         </form>
@@ -154,42 +165,72 @@
     </div>
   </body>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("form");
-      const formName = document.getElementById("formName");
-      const formEmail = document.getElementById("formEmail");
-      const formPhone = document.getElementById("formPhone");
-      const formText = document.getElementById("formText");
-      const formBtnSend = document.getElementById("formBtnSend");
-      const messageLengthElement = document.getElementById("messageLength");
-
-      const namePattern = /^((?![ЫыЪъЭэ])[A-Za-zА-яІіЇїЄє])+$/
+    $(document).ready(function () {
+      const namePattern = /^((?![ЫыЪъЭэ])[A-Za-zА-яІіЇїЄє])+$/;
       const emailPattern = /^.+@.+\..+$/;
       const phonePattern = /^(?![\s()-])[0-9()+-\s]+$/;
-      // const phonePattern = /^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$/
 
-      messageLengthElement.textContent = "0/500"
-      formText.addEventListener('input', (e)=>{
-        messageLengthElement.textContent = formText.value.length + "/500"
+      $("#messageLength").text("0/500");
+
+      $("#formText").on("input", () => {
+        $("#messageLength").text(`${$("#formText").val().length}/500`);
       });
 
-      form.addEventListener('submit', (e)=>{
-        let messages = []
-        if(!namePattern.test(formName.value)){
-          messages.push('Name must use only english and ukrainian letters')
+      $("#form").on("submit", (e) => {
+        let messages = [];
+        if (!namePattern.test(formName.value)) {
+          messages.push("Name must use only english and ukrainian letters");
         }
-        if(!emailPattern.test(formEmail.value)){
-          messages.push('Email must be like symbols@symbols.symbols')
+        if (!emailPattern.test(formEmail.value)) {
+          messages.push("Email must be like symbols@symbols.symbols");
         }
-        if(!phonePattern.test(formPhone.value)){
-          messages.push('Phone must use only numbers, "(", ")", "+", "-"')
+        if (!phonePattern.test(formPhone.value)) {
+          messages.push('Phone must use only numbers, "(", ")", "+", "-"');
         }
-        
-        if(messages.length > 0){
-          e.preventDefault()
-          alert(messages.join('\n'))
-        } 
+
+        if (messages.length > 0) {
+          e.preventDefault();
+          alert(messages.join("\n"));
+        }
       });
+
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const form = document.getElementById("form");
+      //   const formName = document.getElementById("formName");
+      //   const formEmail = document.getElementById("formEmail");
+      //   const formPhone = document.getElementById("formPhone");
+      //   const formText = document.getElementById("formText");
+      //   const formBtnSend = document.getElementById("formBtnSend");
+      //   const messageLengthElement = document.getElementById("messageLength");
+
+      //   const namePattern = /^((?![ЫыЪъЭэ])[A-Za-zА-яІіЇїЄє])+$/;
+      //   const emailPattern = /^.+@.+\..+$/;
+      //   const phonePattern = /^(?![\s()-])[0-9()+-\s]+$/;
+      //   // const phonePattern = /^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$/
+
+      //   messageLengthElement.textContent = "0/500";
+      //   formText.addEventListener("input", (e) => {
+      //     messageLengthElement.textContent = formText.value.length + "/500";
+      //   });
+
+      //   form.addEventListener("submit", (e) => {
+      //     let messages = [];
+      //     if (!namePattern.test(formName.value)) {
+      //       messages.push("Name must use only english and ukrainian letters");
+      //     }
+      //     if (!emailPattern.test(formEmail.value)) {
+      //       messages.push("Email must be like symbols@symbols.symbols");
+      //     }
+      //     if (!phonePattern.test(formPhone.value)) {
+      //       messages.push('Phone must use only numbers, "(", ")", "+", "-"');
+      //     }
+
+      //     if (messages.length > 0) {
+      //       e.preventDefault();
+      //       alert(messages.join("\n"));
+      //     }
+      //   });
+      // });
     });
   </script>
 </html>

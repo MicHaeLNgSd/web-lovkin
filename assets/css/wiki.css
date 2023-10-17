@@ -16,7 +16,7 @@ header {
   padding: 10px;
 }
 
-nav{
+nav {
   background-color: gray;
   min-height: 100px;
   text-align: left;
@@ -28,7 +28,7 @@ nav{
   transition: min-height 0.3s ease-in;  */
 }
 
-#burgerBtn{
+#burgerBtn {
   font-size: 30px;
   color: #fff;
   /* //padding-top: 20px; */
@@ -41,13 +41,14 @@ nav{
   top: 50px; */
   /* height: 40px; */
 }
-#burgerBtnOpen:hover,#burgerBtnClose:hover{
+#burgerBtnOpen:hover,
+#burgerBtnClose:hover {
   cursor: pointer;
 }
 
-.invisible{
+.invisible {
   visibility: hidden;
-  position: absolute; 
+  position: absolute;
   display: none;
 }
 /*
@@ -207,12 +208,12 @@ footer a {
   header {
     font-size: 25px;
   }
-  nav{
+  nav {
     text-align: center;
     align-items: start;
     min-height: 60px;
   }
-  #burgerBtn{
+  #burgerBtn {
     margin-left: 25px;
     margin-top: 15px;
   }
@@ -244,11 +245,11 @@ footer a {
   }
 }
 @media screen and (max-width: 350px) {
-  nav{
+  nav {
     flex-direction: column;
     align-items: center;
   }
-  #burgerBtn{
+  #burgerBtn {
     margin: 0 auto;
     margin-top: 15px;
   }
