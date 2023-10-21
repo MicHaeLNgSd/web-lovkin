@@ -1,55 +1,20 @@
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
   font-family: Courier, monospace;
 }
 
 body {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
-  background-color: #5052c7;
+  background-color:#5052C7;
   font-size: 18px;
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: max-content;
-  max-width: 90vw;
-  text-wrap: wrap;
-}
-
-main {
-  background-color: #fcca46;
-  overflow: hidden;
-
-  /* background-color:bisque; */
-  border: 1px black solid;
-  border-radius: 20px;
-  width: 100%;
+main{
+  background-color:#FCCA46;
   margin-block: 5vh;
-  padding: 20px;
 }
-
-.personalInfo {
-  display: flex;
-  align-items: center;
-
-  /* justify-content: center; */
-  /* flex-direction: ; */
-}
-
-.personalPhoto {
-  background-color: #5052c7;
-  overflow: hidden;
-  margin-right: 20px;
-}
-
-footer {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
-
-  background-color: #fcca46;
+/* 
+footer{
+  background-color:#FCCA46;
   overflow: hidden;
 
   width: 100%;
@@ -59,64 +24,61 @@ footer {
   overflow: hidden;
 }
 
-form {
+form{
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
 }
 
-form fieldset label {
+form fieldset label{
   margin-bottom: 20px;
 }
 
-form fieldset input,
-form fieldset textarea {
-  border: 1px #5052c7 solid;
+form fieldset input, form fieldset textarea{
+  border: 1px #5052C7 solid;
   border-radius: 20px;
   line-height: 25px;
   padding-inline: 10px;
-
-  font-size: 20px;
-  /* font-weight: bold; */
 }
 
-/* form fieldset input{
+ /* form fieldset input{
   width: 300px;
-} */
+} * /
 
-form fieldset textarea {
+form fieldset textarea{
   margin: 0;
 }
 
-form fieldset {
+form fieldset{
   display: flex;
   justify-content: center;
   flex-direction: column;
+
 }
 
-form button {
+form button{
   margin: 0 auto;
   margin-top: 20px;
   padding: 5px 10px;
   width: max-content;
 
-  color: #5052c7;
-  background-color: #f1b204;
+  color: #5052C7;
+  background-color:#F1B204;
   font-size: 20px;
-  border: 1px #5052c7 solid;
+  border: 1px #5052C7 solid;
   border-radius: 20px;
 }
 
-form button:hover {
-  color: #fbbc0e;
-  background-color: #5052c7;
-}
+form button:hover{
+  color:#FBBC0E;
+  background-color:#5052C7;
+} */
 
-.footerImage {
+.footerImage{
   margin-top: 30px;
   height: 50px;
   width: 100%;
-  background-color: #fcca46;
+  background-color:#FCCA46;
   background-image: url("../img/wavy-no-white.png");
   background-repeat: repeat-x;
   background-size: 50px;
@@ -126,17 +88,11 @@ form button:hover {
   left: 0;
   bottom: 1;
 }
-
-h1 {
-  color: #5052c7;
-  font-size: 28px;
-}
-
-h2,
-h3 {
-  color: #5052c7;
+  
+h1, h2, h3 {
+color: #5052C7; 
 }
 
 footer h2 {
-  text-align: center;
+text-align: center;
 }

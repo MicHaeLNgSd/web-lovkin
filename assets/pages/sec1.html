@@ -4,67 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Марк Цукерберґ - KarMiGoria</title>
-    <link rel="icon" href="./assets/img/K.png" />
+    <link rel="icon" href="../img/K.png" />
     <link rel="stylesheet" href="../css/wiki.css" />
-    <script src="https://kit.fontawesome.com/fdf26cd1b2.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./../js/burger.js"></script>
-    <script defer src="./../js/quotes.js"></script>
+    <script src="https://kit.fontawesome.com/d614e7f78f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <header>Марк Цукерберґ</header>
-    <nav>
-      <div id="burgerBtn">
-        <i onclick="burger()" id="burgerBtnOpen" class="fa-solid fa-bars"></i>
-        <i onclick="burger()" id="burgerBtnClose" class="fa-solid fa-xmark invisible"></i>
+    <header class="text-light text-center p-2 fs-4" style="background-color: #333;">Марк Цукерберґ</header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <div class="container-fluid px-4 row-gap-3">
+          <a class="navbar-brand fs-4 text-light" href="#" style="cursor: default;">Cтворені сторінки</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse rounded-4 justify-content-center" id="navbarNav">
+              <ul class="navbar-nav row-gap-3 p-0 bg-transparent align-items-center">
+                  <li class="nav-item p-0 m-0 me-1 " >
+                      <a class="fs-4 text-bg-inf text-black d-block text-center p-2 text-decoration-none fw-bold border border-3 rounded-4 border-dark bg-dark-subtle" href="../../index.html">Головна</a>
+                  </li>
+                  <li class="nav-item text-center p-0 m-0 mx-1 " >
+                      <a class="fs-4 text-bg-inf text-black d-block text-center p-2 text-decoration-none fw-bold border border-3 rounded-4 border-dark bg-info" href="./sec1.html">Марк Цукерберґ</a>
+                  </li>
+                  <li class="nav-item text-center p-0 m-0 mx-1">
+                      <a class="fs-4 text-bg-inf text-black d-block text-center p-2 text-decoration-none fw-bold border border-3 rounded-4 border-dark bg-dark-subtle" href="./sec2.html">Життєпис</a>
+                  </li>
+                  <li class="nav-item text-center p-0 m-0 ms-1">
+                      <a class="fs-4 text-bg-inf text-black d-block text-center p-2 text-decoration-none fw-bold border border-3 rounded-4 border-dark bg-dark-subtle"  href="./sec3.html">Розвиток Facebook</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-      <ul id="burgerMenu" class="invisible">
-        <li><a href="./../../index.html">Головна</a></li>
-        <li class="active"><a href="sec1.html">Марк Цукерберґ</a></li>
-        <li><a href="sec2.html">Життєпис</a></li>
-        <li><a href="sec3.html">Розвиток мережі Facebook</a></li>
-      </ul>
-    </nav>
-    <main>
-      <aside>
-        <h3>Марк Цукерберґ</h3>
+  </nav>
+    <main class="py-3 px-3 p-sm-4 d-flex d-md-block flex-column" style="margin: 0 auto; min-height: 102vh;">
+      <aside class="p-1 mt-3 me-0 ms-2 mb-3 float-md-end d-flex justify-content-center flex-column align-items-center align-self-center" style="background-color: #f4f4f4; border: 1px solid #ccc; width: 300px;">
+        <h3 class="text-center mb-2">Марк Цукерберґ</h3>
         <img
           id="asidePhoto"
-          src="./../img/Mark_Zuckerberg.jpg"
+          src="../img/Mark_Zuckerberg.jpg"
           alt="Mark_Zuckerberg"
         />
-        <table id="asideInfo">
-          <tr>
-            <th>Прізвисько</th>
-            <td>Zuck, ザック і The Zucc</td>
-          </tr>
-          <tr>
-            <th>Народився</th>
-            <td>
-              14 травня 1984 (39 років) Вайт-Плейнс (Нью-Йорк), штат Нью-Йорк,
-              США
-            </td>
-          </tr>
-          <tr>
-            <th>Громадянство</th>
-            <td>США</td>
-          </tr>
-          <tr>
-            <th>Діяльність</th>
-            <td>Співзасновник, виконавчий директор і президент Facebook</td>
-          </tr>
-          <tr>
-            <th>Відомий завдяки</th>
-            <td>засновник компанії Facebook</td>
-          </tr>
-          <tr>
-            <th>Знання мов</th>
-            <td>мандаринська і англійська</td>
-          </tr>
-        </table>
+        <div class="container p-0 pt-1">
+          <div class="table-responsive">
+              <table class="table table-bordered p-0">
+                  <tbody>
+                      <tr>
+                          <th>Прізвисько</th>
+                          <td>Zuck, ザック і The Zucc</td>
+                      </tr>
+                      <tr>
+                          <th>Народився</th>
+                          <td>14 травня 1984 (39 років) Вайт-Плейнс (Нью-Йорк), штат Нью-Йорк,США</td>
+                      </tr>
+                      <tr>
+                          <th>Громадянство</th>
+                          <td>США</td>
+                      </tr>
+                      <tr>
+                          <th>Діяльність</th>
+                          <td>Співзасновник, виконавчий директор і президент Facebook</td>
+                      </tr>
+                      <tr>
+                          <th>Відомий завдяки</th>
+                          <td>засновник компанії Facebook</td>
+                      </tr>
+                      <tr>
+                          <th>Знання мов</th>
+                          <td>мандаринська і англійська</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+        </div>
       </aside>
 
-      <section id="section1">
+      <section id="section1" class="my-3">
         <h2>Марк Цукерберґ</h2>
         <hr />
         <p>
@@ -76,14 +90,21 @@
           Пало-Альто, Каліфорнія.
         </p>
       </section>
+      <section id="contentTable" class="align-self-center bg-body-secondary p-2 pe-4 rounded-2" style="max-width: 250px;">
+        <h4>Зміст</h4>
+        <ol>
+          <li><a href="#section1" class="text-decoration-none">Призначення</a></li>
+          <li><a href="#section2" class="text-decoration-none">Існуючі версії ліцензій</a></li>
+          <li><a href="#section3" class="text-decoration-none">Вільний вміст</a></li>
+        </ol>
+      </section>
     </main>
 
-    <footer>
-      <p>
-        <a href="https://t.me/KarMiGor">© KarMiGoria</a> -
-        <a href="../pages/resume.html">Григоров</a>
-      </p>
-      <p id="quotes"></p>
+    <footer class="text-light text-center pt-3 pb-1 fs-4" style="background-color: #333;"><a href="https://t.me/KarMiGor" class="link-underline link-underline-opacity-0 text-light">© KarMiGoria</a> -
+        <a href="assets/pages/resume.html" class="link-underline link-underline-opacity-0 text-light">Григоров</a>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

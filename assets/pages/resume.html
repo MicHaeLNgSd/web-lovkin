@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Моє резюме</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/resume.css" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <main>
-        <h1 style="text-align: center">Резюме</h1>
-        <h2><u>Персональні дані</u></h2>
-        <div class="personalInfo">
+    <div class="container">
+      <main class="rounded-3 p-4">
+        <h1 class="fs-1 fw-bold" style="text-align: center">Резюме</h1>
+        <h2 class="fs-2 fw-bold"><u>Персональні дані</u></h2>
+        <div class="d-flex align-items-center">
           <img
-            class="personalPhoto"
+            class="personalPhoto ms-3"
             height="150px"
             src="../img/msg.jpg"
             style="border-radius: 20px; border: 1px black solid"
             alt="MyPhoto"
           />
-          <div class="textPersonalInfo">
+          <div class="ms-3">
             <p><b>ПІБ: </b>Григоров Михайло Сергійович</p>
             <p><b>Дата народження:</b> <i>24.07.2003</i></p>
           </div>
         </div>
 
-        <h2><u>Освіта:</u></h2>
+        <h2 class="fs-2 fw-bold"><u>Освіта:</u></h2>
         <ul>
           <li><b>(2023-2026):</b> НУ "Запорізька політехніка"</li>
           <li>
@@ -36,10 +36,10 @@
           <li><b>(2010-2019):</b> ЗОШ №38</li>
         </ul>
 
-        <h2><u>Досвід роботи:</u></h2>
+        <h2 class="fs-2 fw-bold"><u>Досвід роботи:</u></h2>
         <p>Створення сайтів на замовлення</p>
 
-        <h2><u>Професійні навички:</u></h2>
+        <h2 class="fs-2 fw-bold"><u>Професійні навички:</u></h2>
         <ol>
           <li>Розробка програм у <b>Visual Studio</b> мовою <b>С++</b></li>
           <li>
@@ -74,7 +74,7 @@
           </li>
         </ol>
 
-        <h2><u>Знання мов:</u></h2>
+        <h2 class="fs-2 fw-bold"><u>Знання мов:</u></h2>
         <ul>
           <li>Українська: вільне володіння</li>
           <li>Російська: вільне володіння</li>
@@ -84,153 +84,146 @@
           <li>Німецька: A1</li>
         </ul>
 
-        <h2><u>Контактна інформація:</u></h2>
+        <h2 class="fs-2 fw-bold"><u>Контактна інформація:</u></h2>
         <ol>
           <li>
-            <b>Email: </b>
-            <a href="mailto:misha.grigorov2020@gmail">
-              misha.grigorov2020@gmail
-            </a>
+            <b>Email: </b
+            ><a href="mailto:misha.grigorov2020@gmail"
+              >misha.grigorov2020@gmail</a
+            >
           </li>
           <li>
             <b>Номер телефона: </b><a href="tel:380509611945">+380509611945</a>
           </li>
-        </ol>
-        <div class="no-decor">
-          <a href="https://t.me/KarMiGor">
-            <img
+          <a href="https://t.me/KarMiGor"
+            ><img
               width="48"
               height="48"
               src="https://img.icons8.com/color/100/telegram-app--v1.png"
               alt="telegram-app--v1"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/mykhailo-hryhorov-230143273/">
-            <img
+          /></a>
+          <a href="https://www.linkedin.com/in/mykhailo-hryhorov-230143273/"
+            ><img
               width="48"
               height="48"
               src="https://img.icons8.com/fluency/48/linkedin.png"
               alt="linkedin"
-            />
-          </a>
-          <a href="https://github.com/MicHaeLNgSd">
-            <img
+          /></a>
+          <a href="https://github.com/MicHaeLNgSd"
+            ><img
               width="48"
               height="48"
               src="https://img.icons8.com/ios-glyphs/30/github.png"
               alt="github"
-            />
-          </a>
-        </div>
+          /></a>
+        </ol>
       </main>
 
       <footer>
-        <form action="" style="width: 50%" id="form">
-          <fieldset>
-            <legend><h3>Форма зворотнього зв'язку</h3></legend>
-            <label for="name"><b>Ім'я</b></label>
-            <input type="text" name="name" id="formName" required />
-            <br />
-            <label for="email"><b>Електрона пошта:</b></label>
-            <input type="email" name="email" id="formEmail" required />
-            <br />
-            <label for="phone"><b>Телефон:</b></label>
-            <input type="tel" name="phone" id="formPhone" required />
-            <br />
-            <label for="message"><b>Текст повідомлення</b></label>
-            <textarea
-              name="message"
-              maxlength="500"
-              cols="30"
-              rows="5"
-              id="formText"
-              required
-            ></textarea>
-            <div
-              id="messageLength"
-              style="text-align: left; margin-left: 20px"
-            ></div>
-            <button type="submit" id="formBtnSend"><b>Send</b></button>
-          </fieldset>
-        </form>
+        <div class="d-flex flex-column align-items-center mb-5">
+          <div class="bg-warning-subtle rounded-3 p-3">          
+            <h3 class="text-center rounded-top-2 w-100 fs-4 fw-semibold">Напишіть мені!</h3>
+            <div class="center gap-3 d-flex flex-column mx-2">
+                <div class="form-group">
+                    <label for="nameInput" class="fs-5">Ім'я</label>
+                    <input type="text" class="form-control" id="nameInput">
+                    <div class="invalid-feedback">Некоректне ім'я</div>
+                </div>
+                <div class="form-group">
+                    <label for="emailInput" class="fs-5">Електронна пошта</label>
+                    <input type="text" class="form-control" id="emailInput">
+                    <div class="invalid-feedback">Некоректна електронна пошта</div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneInput" class="fs-5">Телефон</label>
+                    <input type="text" class="form-control" id="phoneInput">
+                    <div class="invalid-feedback">Некоректний номер телефону</div>
+                </div>
+                <div class="form-group">
+                    <label for="textInput" class="fs-5">Текст вашого повідомлення</label>
+                    <textarea class="form-control" rows="3" id="textInput"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary fs-4 fw-semibold" style="background-color: #5052C7;" id="sendButton">Відправити</button>
+                <div id="messageLength" class="fs-6"></div>
+            </div>
+          </div>
+      </div>
         <h2>
-          <a href="table.html" style="color: blue">
-            <u>Я вмію створюти таблиці!</u>
-          </a>
+          <a href="table.html" class="text-white"
+            ><u>Я вмію створюти таблиці!</u></a
+          >
         </h2>
       </footer>
       <div class="footerImage">
         <!-- <img src="wavy.jpg" alt="wavy.jpg"> -->
       </div>
+      
     </div>
-  </body>
-  <script>
-    $(document).ready(function () {
-      const namePattern = /^((?![ЫыЪъЭэ])[A-Za-zА-яІіЇїЄє])+$/;
-      const emailPattern = /^.+@.+\..+$/;
-      const phonePattern = /^(?![\s()-])[0-9()+-\s]+$/;
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          const namePattern = /^[a-zA-Zа-яА-ЯІіЇї]{3,30}$/;
+          const phonePattern = /^[0-9()+-]{9,17}$/;
+          const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  
+          function checkValidation() {
+              const nameValue = document.getElementById('nameInput').value;
+              const phoneValue = $('#phoneInput').val();
+              const emailValue = $('#emailInput').val();
+              const isNameValid = namePattern.test(nameValue);
+              const isPhoneValid = phonePattern.test(phoneValue);
+              const isEmailValid = emailPattern.test(emailValue);
+              console.log(isNameValid, isPhoneValid, isEmailValid);
+              if (isNameValid && isPhoneValid && isEmailValid) {
+                  $('#sendButton').prop('disabled', false);
+              } else {
+                  $('#sendButton').prop('disabled', true);
+              }
+          }
 
-      $("#messageLength").text("0/500");
+          $('#nameInput').on('input', () => {
+              if (namePattern.test(document.getElementById('nameInput').value)){
+                  $('#nameInput').addClass('is-valid');
+                  $('#nameInput').removeClass('is-invalid');
+              }else{
+                  $('#nameInput').removeClass('is-valid');
+                  $('#nameInput').addClass('is-invalid');
+              }
+          })
+  
+          $('#emailInput').on('input', function () {
+              if (emailPattern.test($(this).val())) {
+                  $(this).removeClass('is-invalid');
+                  $(this).addClass('is-valid');
+              } else {
+                  $(this).removeClass('is-valid');
+                  $(this).addClass('is-invalid');
+              }
+          });
+          $('#phoneInput').on('input', function () {
+              if (phonePattern.test($(this).val())) {
+                  $(this).removeClass('is-invalid');
+                  $(this).addClass('is-valid');
+              } else {
+                  $(this).removeClass('is-valid');
+                  $(this).addClass('is-invalid');
+              }
+              
+          });
+          $('#sendButton').on("click", function () {
+              alert("Дані відправлені успішно!");
+          });
 
-      $("#formText").on("input", () => {
-        $("#messageLength").text(`${$("#formText").val().length}/500`);
+          $('#nameInput, #phoneInput, #emailInput').on('input', checkValidation);
+          checkValidation();
+          
+          $('#textInput').on('input', ()=> {
+            const messageLength = $('textarea').val().length;
+              $('#messageLength').html(`Довжина тексту: ${messageLength} символів`);
+          })
       });
-
-      $("#form").on("submit", (e) => {
-        let messages = [];
-        if (!namePattern.test(formName.value)) {
-          messages.push("Name must use only english and ukrainian letters");
-        }
-        if (!emailPattern.test(formEmail.value)) {
-          messages.push("Email must be like symbols@symbols.symbols");
-        }
-        if (!phonePattern.test(formPhone.value)) {
-          messages.push('Phone must use only numbers, "(", ")", "+", "-"');
-        }
-
-        if (messages.length > 0) {
-          e.preventDefault();
-          alert(messages.join("\n"));
-        }
-      });
-
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   const form = document.getElementById("form");
-      //   const formName = document.getElementById("formName");
-      //   const formEmail = document.getElementById("formEmail");
-      //   const formPhone = document.getElementById("formPhone");
-      //   const formText = document.getElementById("formText");
-      //   const formBtnSend = document.getElementById("formBtnSend");
-      //   const messageLengthElement = document.getElementById("messageLength");
-
-      //   const namePattern = /^((?![ЫыЪъЭэ])[A-Za-zА-яІіЇїЄє])+$/;
-      //   const emailPattern = /^.+@.+\..+$/;
-      //   const phonePattern = /^(?![\s()-])[0-9()+-\s]+$/;
-      //   // const phonePattern = /^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{4}$/
-
-      //   messageLengthElement.textContent = "0/500";
-      //   formText.addEventListener("input", (e) => {
-      //     messageLengthElement.textContent = formText.value.length + "/500";
-      //   });
-
-      //   form.addEventListener("submit", (e) => {
-      //     let messages = [];
-      //     if (!namePattern.test(formName.value)) {
-      //       messages.push("Name must use only english and ukrainian letters");
-      //     }
-      //     if (!emailPattern.test(formEmail.value)) {
-      //       messages.push("Email must be like symbols@symbols.symbols");
-      //     }
-      //     if (!phonePattern.test(formPhone.value)) {
-      //       messages.push('Phone must use only numbers, "(", ")", "+", "-"');
-      //     }
-
-      //     if (messages.length > 0) {
-      //       e.preventDefault();
-      //       alert(messages.join("\n"));
-      //     }
-      //   });
-      // });
-    });
   </script>
+  </body>
 </html>
